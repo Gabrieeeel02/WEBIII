@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300.400,700&display=swap');
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+font-family: 'Open Sans', sans-serif;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: #ecf0f1;
+    }
+img{
+z-index: 12;
+position: absolute;
+margin-left: 70px;
+animation: animate-icon 2s ease infinite;
+}
+
+@keyframes animate-icon{
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(-20px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.container{
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+background-color: #ecf0f1;
+}
+.content{
+  background-color: #fff;
+  border-radius: 15px;
+  width: 960px;
+  height: 50%;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.first-content .first-column{
+  order: 2;
+}
+.first-content .second-column{
+  order: 1;
+}
+.content::before{
+  content: "";
+  position: absolute;
+  background-color: #58af9b;
+  width: 40%;
+  height: 100%;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  left: 60%;
+}
+.title{
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.title-welcome{
+  color: #fff;
+}
+.title-second{
+  color: #58af9b;
+}
+.btn{
+  border-radius: 15px;
+  text-transform: uppercase;
+  background-color: #58af9b;
+  font-size: 10px;
+  padding: 15px 50px;
+  color: #fff;
+  border: 1px solid #58af9b;
+  cursor: pointer;
+  align-self: center;
+  border: none;
+  width: 50%;
+  margin: 8px;
+  }
+.btn-primary:hover{
+  background-color: #fff;
+  border: 1px solid #58af9b;
+  color: #58af9b;
+}
+.btn-secundary:hover{
+  background-color: #fff;
+  border: 1px solid #58af9b;
+  color: #58af9b;
+}
+.description{
+  font-size: 18px;
+  font-weight: 300;
+  color: #fff;
+  line-height: 20px;
+  margin: 4px;
+}
+.first-column{
+  text-align: left;
+  flex: 2 0;
+  z-index: 10;
+  animation: animate-text 1.5s ease;
+}
+
+@keyframes animate-text{
+  0% {
+        transform:translateY(30px);
+        opacity: 0;
+  }100% {
+        transform:translateY(0px);
+        opacity: 1;
+  }
+}
+
+.second-column{
+  flex: 2 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.first-content{
+  display: flex;
+}
